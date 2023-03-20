@@ -1,4 +1,6 @@
-h1 {font-size: 70px;}
+h1 {font-size: 40px;}
+h2 {font-size: 30px;}
+
 
 .border {border: 2px solid white}
 
@@ -8,10 +10,11 @@ h1 {font-size: 70px;}
     border-style:  solid;
 }
 
+a:link {color:green}
 
-<body> @font-face {
-    font-family:'Raleway', sans-serif;
-    scr: url(https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap);
-}
+a:visited {color:orange}
 
-a:visited {color:green}
+a:hover {color:purple}
+
+
+
