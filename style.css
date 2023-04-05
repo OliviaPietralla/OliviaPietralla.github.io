@@ -22,7 +22,7 @@
     background-color: var(--col-2);
     border-top: solid;
     border-left: solid;
-    border-color: --border-col;
+    border-color: var(--border-col);
     border-width: 2.5px;}
     
   .box2 { grid-area: 1 / 2 / 2 / 3;
