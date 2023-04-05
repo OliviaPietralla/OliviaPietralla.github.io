@@ -1,0 +1,270 @@
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 7px 7px;
+    grid-auto-flow: row;
+    width: 71vh;
+    height: 100vh;
+  }
+  
+  .box1 { grid-area: 1 / 1 / 2 / 2; 
+    background-color:#F29985;
+    border-top: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+    
+  .box2 { grid-area: 1 / 2 / 2 / 3;
+    background-color: #DBD5C9;
+    border-top: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box3 { grid-area: 1 / 3 / 2 / 4; 
+    background-color:#5e5a50;
+    border-right: solid;
+    border-top: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-right-radius: 60px;}
+  
+  .box4 { grid-area: 1 / 4 / 2 / 5; 
+    background-color: #F29985;
+    border-top: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-left-radius: 60px;}
+  
+  .box5 { grid-area: 1 / 5 / 2 / 6;
+    background-color: #D95F43;
+    border-top: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-right-radius: 60px;}
+  
+  .box6 { grid-area: 2 / 1 / 3 / 2;
+    background-color: #5e5a50;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box7 { grid-area: 2 / 2 / 3 / 3;
+    background-color:#FFFFFF;
+    border-style: hidden;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box8 { grid-area: 2 / 3 / 3 / 4;
+    background-color: #DBD5C9;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box9 { grid-area: 2 / 4 / 3 / 5;
+    background-color: #F29985; 
+    border-left: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .bx10 { grid-area: 2 / 5 / 3 / 6;
+    background-color: #5e5a50; 
+    border-left: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .box11 { grid-area: 3 / 1 / 4 / 2;
+    background-color: #5e5a50;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box12 { grid-area: 3 / 2 / 4 / 3;
+    background-color: #DBD5C9; 
+    border-style: hidden;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .box13 { grid-area: 3 / 3 / 4 / 4;
+    background-color: #DBD5C9;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box14 { grid-area: 3 / 4 / 4 / 5;
+    background-color: #F29985;
+    border-left: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box15 { grid-area: 3 / 5 / 4 / 6; 
+    background-color: #D95F43;
+    border-left: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .box16 { grid-area: 4 / 1 / 5 / 2;
+    background-color: #5e5a50;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-left-radius: 60px; }
+  
+  .box17 { grid-area: 4 / 2 / 5 / 3;
+    background-color: #DBD5C9;
+    border-bottom: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box18 { grid-area: 4 / 3 / 5 / 4; 
+    background-color: #DBD5C9;
+    border-bottom: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .box19 { grid-area: 4 / 4 / 5 / 5; 
+    background-color: #F29985;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-right-radius: 60px;}
+  
+  .box20 { grid-area: 4 / 5 / 5 / 6;
+    background-color: #D95F43;
+    border-left: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box21 { grid-area: 5 / 1 / 6 / 2;
+    background-color: #F29985;
+    border-top: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-left-radius: 60px; }
+  
+  .box22 { grid-area: 5 / 2 / 6 / 3;
+    background-color: #D95F43;
+    border-top: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-right-radius: 60px; }
+  
+  .box23 { grid-area: 5 / 3 / 6 / 4;
+    background-color: #D95F43;
+    border-top: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-left-radius: 60px; }
+  
+  .box24 { grid-area: 5 / 4 / 6 / 5;
+    background-color: #F29985;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .box25 { grid-area: 5 / 5 / 6 / 6; 
+    background-color: #F29985;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-right-radius: 60px;}
+  
+  .box26 { grid-area: 6 / 1 / 7 / 2;
+    background-color: #F29985;
+    border-left: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box27 { grid-area: 6 / 2 / 7 / 3;
+    background-color: #F29985;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-left-radius: 60px; }
+  
+  .box28 { grid-area: 6 / 3 / 7 / 4;
+    background-color:#F29985;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-right-radius: 60px; }
+  
+  .box29 { grid-area: 6 / 4 / 7 / 5;
+    background-color: #5e5a50;
+    border-top: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-top-left-radius: 60px; }
+  
+  .box30 { grid-area: 6 / 5 / 7 / 6;
+    background-color: #DBD5C9;
+    border-top: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px; 
+    border-top-right-radius: 60px;}
+  
+  .box31 { grid-area: 7 / 1 / 8 / 2;
+    background-color:#DBD5C9;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-left-radius: 60px; }
+  
+  .box32 { grid-area: 7 / 2 / 8 / 3;
+    background-color: #F29985;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #302540;
+    border-width: 1.5px; }
+  
+  .box33 { grid-area: 7 / 3 / 8 / 4; 
+    background-color: #F29985;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: #302540;
+    border-width: 1.5px;}
+  
+  .box34 { grid-area: 7 / 4 / 8 / 5;
+    background-color: #F29985;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: #302540;
+    border-width: 1.5px;
+    border-bottom-right-radius: 60px; }
+  
+  .box35 { grid-area: 7 / 5 / 8 / 6;
+    background-color: #DBD5C9;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: #302540;
+    border-width: 1.5px; 
+    border-bottom-left-radius: 60px;}
+  
+
+
+
+
+
+
+
