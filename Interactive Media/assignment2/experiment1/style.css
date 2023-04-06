@@ -1,0 +1,302 @@
+/* Root Element: 
+   Encloses all colour elements */
+
+/* This colour palette is inspired by the reference image I chose. */
+
+:root {
+  --col-1: #D95F43;
+  --col-2: #F29985;
+  --col-3: #5e5a50;
+  --col-4: #DBD5C9;
+  --col-5: #FFFFFF;
+  --border-col: #4c3a63;
+}
+
+/* This container contains the necessary code to create the grid layout of the HTML. */ 
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 7px 7px;
+    grid-auto-flow: row;
+    width: 71vh;
+    height: 100vh;
+  }
+
+  /* After creating the grid layout, creating the border was the next most important step for a coherent design system. 
+     The border was necessary to guide the visual flow of the layout. While it is a grid, the reference image is also 
+     clearly meant to be viewed in a particular order for the story to make sense. This is aided by the rounded edged 
+     squares, which guide the eye around to the next square. It is also achieved with the use of the borders which are 
+     purposely placed to block and and guide the viewers linear progression through the comic. I wanted to create consistent 
+     borders to achieve this as well. */
+  
+  .box1 { grid-area: 1 / 1 / 2 / 2; 
+    background: linear-gradient(135deg,#F29985, #5e5a50, #DBD5C9);
+    border-top: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+    
+  .box2 { grid-area: 1 / 2 / 2 / 3;
+    background: linear-gradient(to bottom, #5e5a50, #DBD5C9);
+    border-top: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box3 { grid-area: 1 / 3 / 2 / 4; 
+    background:linear-gradient(-135deg, #F29985, #5e5a50, #DBD5C9);
+    border-right: solid;
+    border-top: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-right-radius: 60px;}
+  
+/* Gradient:
+   I experimented with gradients, drawing from the source material where there are two competing main colours in a box, 
+   I decided to mix them together for a cool effect. It gives a more dynamic feeling to the largely 2D, flat webpage. */
+
+  .box4 { grid-area: 1 / 4 / 2 / 5; 
+    background: linear-gradient(to right, #F29985, #5e5a50);
+    border-top: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-left-radius: 60px;}
+  
+  .box5 { grid-area: 1 / 5 / 2 / 6;
+    background: linear-gradient(to right, #5e5a50, #D95F43);
+    border-top: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-right-radius: 60px;}
+  
+  .box6 { grid-area: 2 / 1 / 3 / 2;
+    background: linear-gradient(to right, #5e5a50, #DBD5C9);
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+/* The use of negative space in this box is very satisfying and visually pleasing.
+   By having no border or fill colour, this box blends into the background but is 
+   shaped by the other surrounding squares. The dark grey fading into the lighter 
+   grey to border the white, draws attention to the blank space and makes the square 
+   appear brighter even though its the same colour as the background. */
+
+  .box7 { grid-area: 2 / 2 / 3 / 3;
+    background-color: #FFFFFF;
+    border-style: hidden;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box8 { grid-area: 2 / 3 / 3 / 4;
+    background: linear-gradient(to left, #5e5a50, #DBD5C9);
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box9 { grid-area: 2 / 4 / 3 / 5;
+    background: linear-gradient(-135deg, #5e5a50, #F29985); 
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .bx10 { grid-area: 2 / 5 / 3 / 6;
+    background: linear-gradient(120deg, #5e5a50, #D95F43 80%); 
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .box11 { grid-area: 3 / 1 / 4 / 2;
+    background: linear-gradient(220deg, #DBD5C9, #5e5a50 60%);
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box12 { grid-area: 3 / 2 / 4 / 3;
+    background: linear-gradient(to top, #5e5a50, #DBD5C9); 
+    border-style: hidden;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .box13 { grid-area: 3 / 3 / 4 / 4;
+    background: linear-gradient(120deg, #DBD5C9, #5e5a50);
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box14 { grid-area: 3 / 4 / 4 / 5;
+    background: linear-gradient(60deg, #F29985 50%, #5e5a50);
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box15 { grid-area: 3 / 5 / 4 / 6; 
+    background: linear-gradient(210deg,#D95F43, #F29985);
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .box16 { grid-area: 4 / 1 / 5 / 2;
+    background-color: #5e5a50;
+    border-bottom: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-left-radius: 60px; }
+  
+  .box17 { grid-area: 4 / 2 / 5 / 3;
+    background: linear-gradient(135deg, #5e5a50 30%, #DBD5C9);
+    border-bottom: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box18 { grid-area: 4 / 3 / 5 / 4; 
+    background: linear-gradient(-45deg, #F29985, #DBD5C9 80%);
+    border-bottom: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .box19 { grid-area: 4 / 4 / 5 / 5; 
+    background-color: #F29985;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-right-radius: 60px;}
+  
+  .box20 { grid-area: 4 / 5 / 5 / 6;
+    background: linear-gradient(to bottom, #F29985, #D95F43);
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box21 { grid-area: 5 / 1 / 6 / 2;
+    background: linear-gradient(to bottom left, #DBD5C9, #F29985);
+    border-top: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-left-radius: 60px; }
+  
+  .box22 { grid-area: 5 / 2 / 6 / 3;
+    background: linear-gradient(120deg, #DBD5C9, #D95F43 80%);
+    border-top: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-right-radius: 60px; }
+  
+  .box23 { grid-area: 5 / 3 / 6 / 4;
+    background: linear-gradient(-40deg, #5e5a50, #D95F43);
+    border-top: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-left-radius: 60px; }
+  
+  .box24 { grid-area: 5 / 4 / 6 / 5;
+    background: linear-gradient(240deg, #D95F43, #F29985, #5e5a50);
+    border-top: solid;
+    border-bottom: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .box25 { grid-area: 5 / 5 / 6 / 6; 
+    background: linear-gradient(to bottom right, #D95F43, #F29985 60%);
+    border-bottom: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-right-radius: 60px;}
+  
+  .box26 { grid-area: 6 / 1 / 7 / 2;
+    background-color: #F29985;
+    border-left: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box27 { grid-area: 6 / 2 / 7 / 3;
+    background: linear-gradient(130deg, #F29985 20%, #D95F43, #5e5a50);
+    border-bottom: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-left-radius: 60px; }
+  
+  .box28 { grid-area: 6 / 3 / 7 / 4;
+    background: linear-gradient(120deg, #D95F43, #5e5a50 90%);
+    border-bottom: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-right-radius: 60px; }
+  
+  .box29 { grid-area: 6 / 4 / 7 / 5;
+    background-color: #5e5a50;
+    border-top: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-top-left-radius: 60px; }
+  
+  .box30 { grid-area: 6 / 5 / 7 / 6;
+    background: linear-gradient(-45deg, #DBD5C9 30%, #5e5a50);
+    border-top: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; 
+    border-top-right-radius: 60px;}
+  
+  .box31 { grid-area: 7 / 1 / 8 / 2;
+    background: linear-gradient(to right, #F29985, #DBD5C9);
+    border-bottom: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-left-radius: 60px; }
+  
+  .box32 { grid-area: 7 / 2 / 8 / 3;
+    background: linear-gradient(to left, #F29985, #DBD5C9);
+    border-top: solid;
+    border-bottom: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; }
+  
+  .box33 { grid-area: 7 / 3 / 8 / 4; 
+    background-color: #F29985;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;}
+  
+  .box34 { grid-area: 7 / 4 / 8 / 5;
+    background: linear-gradient(to top, #F29985, #5e5a50) ;
+    border-bottom: solid;
+    border-right: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px;
+    border-bottom-right-radius: 60px; }
+  
+  .box35 { grid-area: 7 / 5 / 8 / 6;
+    background: linear-gradient(#DBD5C9, #D95F43);
+    border-bottom: solid;
+    border-left: solid;
+    border-color: var(--border-col);
+    border-width: 2.5px; 
+    border-bottom-left-radius: 60px;}
+  
+
+
+
+
+
+
+
