@@ -44,6 +44,14 @@ body{
 }
 
 .FilterButton{
+  background-color:#ffffff;
+  color: #303d5b;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 8px;
+  
+
 
 }
 
@@ -52,8 +60,23 @@ body{
 }
 
 .RecipeLink{
-  color: var(--col-04);
+  background-color: white;
+  border: 4px grey;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  width: 150px;
+  
+}
 
+.RecipeLink:hover{
+  background-color: grey;
+  color: white;
 }
 
 .RecipeName{
@@ -86,12 +109,26 @@ body{
 
 }
 
-.TimeToCook{
+.Information{
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
 
+ul{ 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  float: left;
+}
+
+.TimeToCook{
+  font-size: 25px;
 }
 
 .SkillLevel{
-
+  font-size: 25px;
 }
 
 .Course{
@@ -99,7 +136,7 @@ body{
 }
 
 .Servings{
-
+  font-size: 25px;
 }
 
 .Dietary{
