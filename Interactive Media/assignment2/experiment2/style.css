@@ -10,9 +10,9 @@
 /* https://lospec.com/palette-list/1bit-monitor-glow */
 /* you're welcome to change the colours if you want or any of the other general page style */
 :root{
-  --col-01:#303d5b;
-  --col-02:#efebd6;
-  --col-03:#bcbdc2;
+  --col-01:#3a4c75;
+  --col-02:#e2dcc0;
+  --col-03:#757572;
   --col-04:#a724e4;
   --border: 1px solid var(--col-02);
 }
@@ -55,14 +55,21 @@ body{
 
 }
 
-.SelectedFilter{
-  
+hr{
+  border-width: 2px;
+}
+
+.RecipeInformation{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: space-between;
 }
 
 .RecipeLink{
-  background-color: white;
-  border: 4px grey;
-  color: black;
+  border: 4px var(--col-01);
+  background-color: var(--col-02);
+  color: var(--col-01);
   padding: 10px 10px;
   text-align: center;
   display: inline-block;
@@ -75,8 +82,9 @@ body{
 }
 
 .RecipeLink:hover{
-  background-color: grey;
-  color: white;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  
 }
 
 .RecipeName{
@@ -95,6 +103,7 @@ body{
 
 .RecipeImg{
 
+
 }
 
 .Attribution{
@@ -107,20 +116,6 @@ body{
 
 .Cuisine{
 
-}
-
-.Information{
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-}
-
-ul{ 
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
-  float: left;
 }
 
 .TimeToCook{
