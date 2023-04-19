@@ -14,7 +14,7 @@
   --col-02:#e2dcc0;
   --col-03:#757572;
   --col-04:#a724e4;
-  --border: 1px solid var(--col-02);
+  
 }
 
 body{
@@ -32,31 +32,37 @@ body{
 .RecipeBox{
   display: flex;
   flex-direction: column;
-  border: var(--border);
+  padding: 1vw;
 }
 
 .FilterSection{
-
+  display: flex;
+  flex-direction: row;
+  padding: 1vw;
 }
 
 .FilterBox{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 4px 20px;
+  
 
 }
 
 .FilterButton{
   background-color:#ffffff;
+  font-size: 20px;
   color: #303d5b;
   border: none;
   padding: 10px 15px;
   text-align: center;
   border-radius: 8px;
-  
-
-
+  margin: 4px 2px;
 }
 
 hr{
-  border-width: 2px;
+  border: 1px solid var(--col-01)
 }
 
 .RecipeInformation{
@@ -67,24 +73,22 @@ hr{
 }
 
 .RecipeLink{
-  border: 4px var(--col-01);
-  background-color: var(--col-02);
+  font-size: 20px;
   color: var(--col-01);
+  border: 2px solid var(--col-01);
+  background-color: var(--col-02);
+  text-decoration: none;
   padding: 10px 10px;
   text-align: center;
   display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
+  margin: 4px 4px;
   transition-duration: 0.4s;
-  text-decoration: none;
   width: 150px;
-  
 }
 
 .RecipeLink:hover{
   background-color: var(--col-01);
   color: var(--col-02);
-  
 }
 
 .RecipeName{
@@ -139,12 +143,11 @@ hr{
 }
 
 .DatePublished{
-  color: var(--col-03);
 
 }
 
 .DateUpdated{
-  color: var(--col-03);
+  
 }
 
 .SpecialEquipment{
