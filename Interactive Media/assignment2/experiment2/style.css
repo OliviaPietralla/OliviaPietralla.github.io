@@ -12,8 +12,8 @@
 :root{
   --col-01:#3a4c75;
   --col-02:#e2dcc0;
-  --col-03:#757572;
-  --col-04:#a724e4;
+  --col-03:#b9bfc2;
+
   
 }
 
@@ -23,16 +23,6 @@ body{
   background-color: var(--col-02);
   color: var(--col-01);
   padding: 2vw;
-}
-
-/*
-  i've set up a basic flexbox for each recipe container - you might want to change some of the 
-  flex properties here on the container or on the individual flex items depending on how you want to style them
-*/
-.RecipeBox{
-  display: flex;
-  flex-direction: column;
-  padding: 1vw;
 }
 
 .FilterSection{
@@ -46,23 +36,47 @@ body{
   display: flex;
   flex-direction: column;
   margin: 4px 20px;
-  
-
 }
 
 .FilterButton{
-  background-color:#ffffff;
+  background-color: var(--col-03);
   font-size: 20px;
   color: #303d5b;
   border: none;
   padding: 10px 15px;
   text-align: center;
-  border-radius: 8px;
   margin: 4px 2px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 hr{
   border: 1px solid var(--col-01)
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1vw;
+  margin-top: 20px;
+  border: 2px solid var(--col-03);
+}
+
+.RecipeBoxContainer{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.IsCentered{
+  text-align: center;
+  margin: 20px 20px;
 }
 
 .RecipeInformation{
@@ -70,6 +84,7 @@ hr{
   flex-direction: row;
   justify-content: space-around;
   align-items: space-between;
+  margin: 5px;
 }
 
 .RecipeLink{
@@ -84,6 +99,7 @@ hr{
   margin: 4px 4px;
   transition-duration: 0.4s;
   width: 150px;
+  
 }
 
 .RecipeLink:hover{
@@ -93,21 +109,31 @@ hr{
 
 .RecipeName{
   font-size: 50px;
+  margin: 5px;
 
 }
 
 .Author{
   font-size: 30px;
+  margin: 5px;
 
 }
 
 .RecipeImageContainer{
+  text-align: center;
 
 }
 
 .RecipeImg{
+  width: 70%;
+  margin: 15px;
 
+}
 
+.OtherInformation{
+  font-size: 20px;
+  text-align: center;
+  margin: 15px;
 }
 
 .Attribution{
