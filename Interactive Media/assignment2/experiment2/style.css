@@ -13,8 +13,6 @@
   --col-01:#3a4c75;
   --col-02:#e2dcc0;
   --col-03:#b9bfc2;
-
-  
 }
 
 body{
@@ -71,7 +69,6 @@ hr{
 .RecipeBoxContainer{
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .IsCentered{
@@ -99,7 +96,6 @@ hr{
   margin: 4px 4px;
   transition-duration: 0.4s;
   width: 150px;
-  
 }
 
 .RecipeLink:hover{
@@ -110,24 +106,20 @@ hr{
 .RecipeName{
   font-size: 50px;
   margin: 5px;
-
 }
 
 .Author{
   font-size: 30px;
   margin: 5px;
-
 }
 
 .RecipeImageContainer{
   text-align: center;
-
 }
 
 .RecipeImg{
   width: 70%;
   margin: 15px;
-
 }
 
 .OtherInformation{
