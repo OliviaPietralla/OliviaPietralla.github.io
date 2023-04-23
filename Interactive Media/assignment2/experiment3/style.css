@@ -146,24 +146,20 @@ a{
 
 #load-link:hover{
   cursor: pointer;
-  transform: scale(2);
+  transform: scale(1.5);
 }
 
 /* throbber while page is fake loading */
-#load-throbber{
+
   /* the width, height and background-color give it a shape on the page without any content inside - 
   these value are arbitrary, please change to create your own design  */
-  width: 25%;
-  height: 1rem;
-  background-color: var(--col-03);
+
   /* we also initially set display to none so it only shows once the link is clicked */
-  display: none;
-  cursor: progress;
-}
+
 
 #animation-container{
   width: 50%;
-  display: flex;
+  display: none;
   flex-direction: row;
   gap: 1rem;
   margin: 5px;
@@ -171,14 +167,15 @@ a{
 
 .animationExample{
   height: 2rem;
-  background-color: blue;
+  width: 2rem;
+  background-color: black;
   flex-grow: 1;
   animation: loadingAnimation 2s infinite;
 }
 
 @keyframes loadingAnimation {
   0% {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--col-01);
     transform: scale(1);
   }
   10% {
@@ -188,7 +185,7 @@ a{
     transform: scale(0.8) rotate(72deg);
   }
   25% {
-    background-color: orange;
+    background-color: #1e1765bd;
   }
   30% {
     transform: scale(0.7) rotate(108deg);
@@ -197,7 +194,7 @@ a{
     transform: scale(0.6) rotate(144deg);
   }
   50% {
-    background-color: yellow;
+    background-color: #1e17657a;
     transform: scale(0.5) rotate(180deg);
   }
   60% {
@@ -207,7 +204,7 @@ a{
     transform: scale(0.3) rotate(252deg);
   }
   75% {
-    background-color: green; 
+    background-color: #1e17653e; 
   }
   80% {
     transform: scale(0.2) rotate(288deg);
@@ -216,7 +213,7 @@ a{
     transform: scale(0.1) rotate(324deg);
   }
   100% {
-    background-color: blue;
+    background-color: #1e17650d;
     transform: scale(0) rotate(360deg);
   }
 }
@@ -228,22 +225,27 @@ a{
 
 #animation-example-2{
   animation: loadingAnimation 5s infinite;
+  animation-delay: 0.5s;
 }
 
 #animation-example-3{
   animation: loadingAnimation 5s infinite;
+  animation-delay: 1s;
 }
 
 #animation-example-4{
   animation: loadingAnimation 5s infinite;
+  animation-delay: 1.5s;
 }
 
 #animation-example-5{
   animation: loadingAnimation 5s infinite;
+  animation-delay: 2s;
 }
 
 #animation-example-6{
   animation: loadingAnimation 5s infinite;
+  animation-delay: 2.5s;
 } 
 
 /* Media Queries */
