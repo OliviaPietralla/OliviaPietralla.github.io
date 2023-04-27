@@ -127,7 +127,7 @@ a{
   
 }
 
-/* code for loading page */
+/* ---- CODE FOR LOADING PAGE ---- */
 
 #load-body{
   height: 100vh;
@@ -136,12 +136,12 @@ a{
   align-items: center;
   justify-content: center;
 }
+
 /* changing button to look like a link */
 #load-link{
   line-height: 1rem;
   background-color: transparent;
   border: 0;
-
 }
 
 #load-link:hover{
@@ -165,11 +165,12 @@ a{
   margin: 5px;
 }
 
-.animationExample{
+.bouncingLoader{
   height: 2rem;
   width: 2rem;
   background-color: black;
   flex-grow: 1;
+  border-radius: 100%;
   animation: loadingAnimation 2s infinite;
 }
 
@@ -178,74 +179,75 @@ a{
     background-color: var(--col-01);
     transform: scale(1);
   }
+
   10% {
-    transform: scale(0.9) rotate(36deg);
+    transform: scale(0.9);
   }
   20% {
-    transform: scale(0.8) rotate(72deg);
+    transform: scale(0.8);
   }
   25% {
     background-color: #1e1765bd;
   }
   30% {
-    transform: scale(0.7) rotate(108deg);
+    transform: scale(0.7);
   }
   40% {
-    transform: scale(0.6) rotate(144deg);
+    transform: scale(0.6);
   }
   50% {
     background-color: #1e17657a;
-    transform: scale(0.5) rotate(180deg);
+    transform: scale(0.5);
   }
   60% {
-    transform: scale(0.4) rotate(216deg);
+    transform: scale(0.4);
   }
   70% {
-    transform: scale(0.3) rotate(252deg);
+    transform: scale(0.3);
   }
   75% {
     background-color: #1e17653e; 
   }
   80% {
-    transform: scale(0.2) rotate(288deg);
+    transform: scale(0.2);
   }
   90% {
-    transform: scale(0.1) rotate(324deg);
+    transform: scale(0.1);
   }
   100% {
     background-color: #1e17650d;
-    transform: scale(0) rotate(360deg);
+    transform: scale(0);
   }
 }
 
 
-#animation-example-1{
+#bouncing-dot-1{
   animation: loadingAnimation 5s infinite;
 }
 
-#animation-example-2{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 0.5s;
-}
-
-#animation-example-3{
+#bouncing-dot-2{
   animation: loadingAnimation 5s infinite;
   animation-delay: 1s;
 }
 
-#animation-example-4{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 1.5s;
-}
-
-#animation-example-5{
+#bouncing-dot-3{
   animation: loadingAnimation 5s infinite;
   animation-delay: 2s;
 }
 
-#animation-example-6{
+#bouncing-dot-4{
   animation: loadingAnimation 5s infinite;
-  animation-delay: 2.5s;
+  animation-delay: 3s;
+}
+
+#bouncing-dot-5{
+  animation: loadingAnimation 5s infinite;
+  animation-delay: 4s;
+}
+
+#bouncing-dot-6{
+  animation: loadingAnimation 5s infinite;
+  animation-delay: 5s;
 } 
 
 /* Media Queries */
