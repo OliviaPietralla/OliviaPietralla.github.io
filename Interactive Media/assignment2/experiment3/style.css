@@ -28,15 +28,30 @@ body{
 
 }
 
+/* -- NAVIGATION -- */
+
 nav {
   margin-top: 1rem;
-  
 }
 
+/* There was no point in numbering the list, as the headings are self-explanatory and the content can be read in any order. 
+   So I created a dot point list instead 
+*/ 
 nav li{
   font-size: 1rem;
-  
+  list-style-type: circle;
+  padding: 8px;
 }
+
+/* I want the visual and interactive elements of the webpage buttons to be similar, 
+   so I have the buttons fill on hover. 
+*/ 
+nav li:hover {
+  background-color: var(--col-04);
+  color: var(--col-01);
+}
+
+/* -- */ 
 
 section{
   margin-bottom: 2rem;
@@ -82,7 +97,6 @@ a{
 
 .cursor{
   cursor: pointer;
-  
 }
 
 .img-wrapper{
@@ -111,7 +125,7 @@ a{
   top: 1rem;
   padding: 10px 10px;
   cursor: pointer;
-  border: 1px solid#1d1765;
+  border: 1px solid #1d1765;
 
 }
 
@@ -137,51 +151,60 @@ a{
   justify-content: center;
 }
 
-/* changing button to look like a link */
+/* -- BUTTON -- */
+
+/* A dark border around the link clearly supports the words in indicating that it is a clickable button. */
 #load-link{
-  line-height: 1rem;
+  line-height: 2rem;
+  color: #1d1765;
   background-color: transparent;
-  border: 0;
+  border: 2px solid #1d1765;
 }
 
+/* When the user hovers over the button, their action is supported by a number of intuitive ways - based on past digital experiences. 
+   The cursor changes into a pointer indicating the ability to click. 
+   The button enlarges slightly, making it easier to see as an interaction. 
+   The button colour is filled, making it stand out on the webpage. 
+*/
 #load-link:hover{
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.1);
+  background-color: #1d1765;
+  color: var(--col-02);
 }
 
-/* throbber while page is fake loading */
+/* -- THROBBER -- */
 
   /* the width, height and background-color give it a shape on the page without any content inside - 
   these value are arbitrary, please change to create your own design  */
 
   /* we also initially set display to none so it only shows once the link is clicked */
 
-
 #animation-container{
   width: 50%;
   display: none;
   flex-direction: row;
   gap: 1rem;
-  margin: 5px;
 }
 
 .bouncingLoader{
-  height: 2rem;
-  width: 2rem;
-  background-color: black;
+  height: 40px;
+  width: 40px;
+  background-color: var(--col-01);
   flex-grow: 1;
-  border-radius: 100%;
-  animation: loadingAnimation 2s infinite;
+  border-radius: 50%;
+  animation: loadingAnimation infinite;
 }
 
 @keyframes loadingAnimation {
   0% {
-    background-color: var(--col-01);
-    transform: scale(1);
+    background-color: #1e17657a;
+    transform: scale(0);
   }
-
+  /*
   10% {
     transform: scale(0.9);
+    position: 100%
   }
   20% {
     transform: scale(0.8);
@@ -194,16 +217,16 @@ a{
   }
   40% {
     transform: scale(0.6);
-  }
+  } */
   50% {
-    background-color: #1e17657a;
-    transform: scale(0.5);
+    background-color: var(--col-01);
+    transform: scale(1);
   }
-  60% {
+ /* 60% {
     transform: scale(0.4);
   }
   70% {
-    transform: scale(0.3);
+    transform: scale(0.3); 
   }
   75% {
     background-color: #1e17653e; 
@@ -213,41 +236,40 @@ a{
   }
   90% {
     transform: scale(0.1);
-  }
+  } */
   100% {
     background-color: #1e17650d;
     transform: scale(0);
   }
 }
 
-
 #bouncing-dot-1{
-  animation: loadingAnimation 5s infinite;
+  animation: loadingAnimation 2s infinite;
 }
 
 #bouncing-dot-2{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 1s;
+  animation: loadingAnimation 2s infinite;
+  animation-delay: 0.2s;
 }
 
 #bouncing-dot-3{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 2s;
+  animation: loadingAnimation 2s infinite;
+  animation-delay: 0.4s;
 }
 
 #bouncing-dot-4{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 3s;
+  animation: loadingAnimation 2s infinite;
+  animation-delay: 0.6s;
 }
 
 #bouncing-dot-5{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 4s;
+  animation: loadingAnimation 2s infinite;
+  animation-delay: 0.8s;
 }
 
 #bouncing-dot-6{
-  animation: loadingAnimation 5s infinite;
-  animation-delay: 5s;
+  animation: loadingAnimation 2s infinite;
+  animation-delay: 1s;
 } 
 
 /* Media Queries */
