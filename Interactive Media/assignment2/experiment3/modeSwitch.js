@@ -6,8 +6,8 @@
 let isDark = false;
 
 // before we go messing about with our colour palette we set the default values - these are the same colour values as our CSS
-let darkCol = "#171219";
-let lightCol = "#f2fbeb";
+let darkCol = "#060137";
+let lightCol = "#faffea";
 
 // as we'll discuss in class with prefers-reduced-motion we can check user system preferences - in this case we'll 
 // check if they have dark mode turned on - if so we'll instead set isDark to true and change the CSS variables

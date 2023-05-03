@@ -14,18 +14,20 @@
   /* https://lospec.com/palette-list/manga-pallete */
   --col-01:#1d1765;
   --col-02:#faffea;
-  --col-03:#5252ff;
+  
   --col-04:#e878df;
   font-size: 16px;
   /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
   scroll-behavior: smooth;
 }
 
+/* Transition duration applies to time it takes to change between modes. I decided on a slightly longer transition
+   because I found it calming watching the colours slowly change from cream to navy and vise versa. */ 
 body{
   padding: 1rem;
   background-color: var(--col-02);
   color: var(--col-01);
-
+  transition-duration: 6s;
 }
 
 /* -- NAVIGATION -- */
@@ -34,8 +36,9 @@ nav {
   margin-top: 1rem;
 }
 
-/* There was no point in numbering the list, as the headings are self-explanatory and the content can be read in any order. 
-   So I created a dot point list instead 
+/* A numbered system suggests to the reader that the sections must be read in order, but in this case,
+   the headings are self-explanatory and the content can be read in any order, which is why there is a navigation bar. 
+   I created a dot point list instead a numbered system. 
 */ 
 nav li{
   font-size: 1rem;
@@ -43,8 +46,8 @@ nav li{
   padding: 8px;
 }
 
-/* I want the visual and interactive elements of the webpage buttons to be similar, 
-   so I have the buttons fill on hover. 
+/* I want the visual and interactive elements of the webpage buttons to be similar, as it provides consistency for the website users
+   The buttons fill solid  when the cursor hovers over it. 
 */ 
 nav li:hover {
   background-color: var(--col-04);
@@ -68,6 +71,10 @@ h2{
 p{
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+hr{
+  border-color: var(--col-01);
 }
 
 figcaption{
@@ -118,6 +125,9 @@ a{
   column-width: 25rem;
 }
 
+/* -- BUTTON -- */ 
+
+/* Keeps the button to the top right of the screen, with a simple border outlining the text but not distracting from the content on screen. */ 
 #mode-button{
   float: right;
   /* note the use of position: sticky to keep the button on the page even with scrolling */
@@ -125,20 +135,21 @@ a{
   top: 1rem;
   padding: 10px 10px;
   cursor: pointer;
-  border: 1px solid #1d1765;
-
+  border: 2px solid var(--col-01);
 }
 
-#mode-button:hover{
-  
-  background-color: #faffea;
-  color: #1d1765;
-  
+/* Like other buttons on the webpage, when the mouse is hovered over it, the button fills with a solid colour. 
+   I like this effect especially on this button because it gives the user a slight preview of the function of the button. 
+   The dark mode will have the background being a dark blue with light cream text and vise versa. */ 
+#mode-button:hover{ 
+  background-color: var(--col-01);
+  color: var(--col-02);
 }
 
 #topButton{
+  padding: 10px, 10px;
+  border: 2px solid var(--col-01);
   color: var(--col-01);
-  
 }
 
 /* ---- CODE FOR LOADING PAGE ---- */
@@ -175,74 +186,50 @@ a{
 
 /* -- THROBBER -- */
 
-  /* the width, height and background-color give it a shape on the page without any content inside - 
-  these value are arbitrary, please change to create your own design  */
-
+  /* I settled on a bouncing dot inspired loading animation. I think it is a fun and simple way to indicate to users that time is moving forward and the webpage is "thinking". */
+  /* The container ensures that the dots are spaced evenly but also remain smaller than the title text when the webpage is resized. */ 
   /* we also initially set display to none so it only shows once the link is clicked */
-
 #animation-container{
-  width: 50%;
+  width: 30%;
   display: none;
   flex-direction: row;
+  justify-content: space-evenly;
   gap: 1rem;
 }
 
+/* Determines the size of the dots. With border-radius creating the roundness. */
 .bouncingLoader{
   height: 40px;
   width: 40px;
   background-color: var(--col-01);
-  flex-grow: 1;
   border-radius: 50%;
   animation: loadingAnimation infinite;
 }
 
+/* I originally started creating keyframes at every 5-10 % to change the dots size or colours, 
+   but then figured out that if you just create a keyframe at the start with the starting size and colour
+   and one at the end or middle with the change to a different colour or size, the animation automatically fills in the rest smoothly. 
+   So at the start of the animation, the dots are at a scale of 0 so that they grow to be the full size halfway and shrink back down at the end.
+   Similarly, the colours are set to start and end at the main blue colour with opacity and only reach 100% opacity halfway through the animation. */ 
 @keyframes loadingAnimation {
   0% {
-    background-color: #1e17657a;
+    background-color: var(--col-01), 0.3;
     transform: scale(0);
   }
-  /*
-  10% {
-    transform: scale(0.9);
-    position: 100%
-  }
-  20% {
-    transform: scale(0.8);
-  }
-  25% {
-    background-color: #1e1765bd;
-  }
-  30% {
-    transform: scale(0.7);
-  }
-  40% {
-    transform: scale(0.6);
-  } */
+
   50% {
     background-color: var(--col-01);
     transform: scale(1);
   }
- /* 60% {
-    transform: scale(0.4);
-  }
-  70% {
-    transform: scale(0.3); 
-  }
-  75% {
-    background-color: #1e17653e; 
-  }
-  80% {
-    transform: scale(0.2);
-  }
-  90% {
-    transform: scale(0.1);
-  } */
+
   100% {
-    background-color: #1e17650d;
+    background-color: var(--col-01), 0.3;
     transform: scale(0);
   }
 }
 
+/* To add to the smoothness of the animation I set a delay on each dot by 0.2 sec so that the animation starts on each dot slightly after the one in front, 
+   creating a wave effect that is associated with this sort of loading animation. */
 #bouncing-dot-1{
   animation: loadingAnimation 2s infinite;
 }
@@ -272,9 +259,9 @@ a{
   animation-delay: 1s;
 } 
 
-/* Media Queries */
+/* ---- MEDIA QUERIES ---- */
 
-/* medium devices 600 - 992 */
+/* -- MEDIUM DEVICES 600 - 992 */
 @media only screen and (min-width: 600px) {
   :root{
     font-size: 20px;
@@ -284,10 +271,9 @@ a{
     width: 75%;
     margin: 1.5rem auto;
   }
-
 }
 
-/* medium devices 992 + */
+/* -- LARGER DEVICES 992 + */
 @media only screen and (min-width: 992px) {
   :root{
     font-size: 24px;
@@ -298,7 +284,6 @@ a{
     float: right;
     margin: 1.5rem;
   }
-
 }
 
 @media (prefers-reduced-motion) {
