@@ -156,7 +156,7 @@ function muteUnmute(){
     muteButton.style.backgroundImage = "url('.icons/mute.svg')";
   } else {
     videoElement.muted = true;
-    muteButton.style.backgroundImage = "url('.icons/unmute.svg')";
+    muteButton.style.backgroundImage = "url('icons/unmute.svg')";
   }
 }
 muteButton.addEventListener("click", muteUnmute);
