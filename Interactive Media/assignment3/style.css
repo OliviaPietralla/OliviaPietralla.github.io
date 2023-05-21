@@ -1,0 +1,78 @@
+#StartButton:hover {
+    
+}
+
+.cursor:hover {
+    cursor: pointer;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+button { 
+    border-radius: 0%;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+
+}
+
+#RoundButton:hover {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#EnlargeButton:hover {
+    transform: scale(1.3);
+}
+
+#SquareButton:hover {
+    width: 80px;
+    height: 80px;
+
+}
+
+#ShrinkButton:hover {
+    transform: scale(0.7);
+}
+
+#SidewaysButton:hover {
+    transform: rotate(90deg);
+}
+
+#ColourButton:hover {
+    background-color: greenyellow;
+}
+
+#InvertButton:hover {
+    background-color: black;
+    color: antiquewhite;
+}
+
+#MovementButton:hover {
+    animation: BounceAnimation 1s infinite;
+}
+
+@keyframes BounceAnimation {
+    50% {
+        transform: translate(0px, -20px) scale(1.05); 
+    }
+
+}
+
+#RotateButton:hover {
+    animation: RotateAnimation 3s infinite;
+    transition-timing-function: linear;
+    transition-delay: none;
+}
+
+@keyframes RotateAnimation {
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
