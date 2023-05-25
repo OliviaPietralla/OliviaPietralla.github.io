@@ -1,6 +1,4 @@
-#StartButton:hover {
-    
-}
+
 
 .cursor:hover {
     cursor: pointer;
@@ -46,6 +44,10 @@ button {
     background-color: greenyellow;
 }
 
+.ColourButton {
+    background-color: greenyellow;
+}
+
 #InvertButton:hover {
     background-color: black;
     color: antiquewhite;
@@ -63,16 +65,26 @@ button {
 }
 
 #RotateButton:hover {
-    animation: RotateAnimation 3s infinite;
+    animation: RotateAnimation 2s;
     transition-timing-function: linear;
-    transition-delay: none;
+    animation-iteration-count: 1;
 }
 
 @keyframes RotateAnimation {
     50% {
-        transform: rotate(180deg);
+        
     }
     100% {
-        transform: rotate(360deg);
+        transform: rotate(180deg);
     }
+}
+
+.text {
+    display: none;
+    overflow: hidden;
+}
+
+
+.hidden {
+    display: none;
 }
