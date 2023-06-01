@@ -18,6 +18,8 @@
 
     <h1> Assignment 3 - Interactive Webpage</h1>
 
+    <button class="cursor" id="ResetButton" onclick="ResetBtn()">Reset</button>
+
     <div class="Button-Container"> 
 
       <div class="line1">
@@ -28,31 +30,31 @@
 
       <div class="line2">
 
-          <button class="cursor hidden changeBtn colour" id="RoundButton" onclick="ShowBtn2()">Round Button!</button>
-          <button class="cursor hidden changeBtn colour" id="SquareButton" onclick="ShowBtn2()">Square Button!</button>
+          <button class="cursor hidden changeBtn" id="RoundButton" onclick="ShowBtn2(); RoundBtn();">Round Button!</button>
+          <button class="cursor hidden changeBtn" id="SquareButton" onclick="ShowBtn2(); SquareBtn();">Square Button!</button>
 
       </div>
 
       <div class="line3">
 
-      <button class="cursor hidden colour" id="EnlargeButton" onclick="ShowBtn3()">Enlarge Button!</button>
-      <button class="cursor hidden colour" id="ColourButton" onclick="ShowBtn3(); ColourBtn();">Colour Button!</button>
-      <button class="cursor hidden colour" id="ShrinkButton" onclick="ShowBtn3()">Shrink Button!</button>
+      <button class="cursor hidden changeBtn" id="EnlargeButton" onclick="ShowBtn3(); EnlargeBtn();">Enlarge Button!</button>
+      <button class="cursor hidden changeBtn" id="ColourButton" onclick="ShowBtn3(); ColourBtn();">Colour Button!</button>
+      <button class="cursor hidden changeBtn" id="ShrinkButton" onclick="ShowBtn3(); ShrinkBtn();">Shrink Button!</button>
 
       </div>
 
       <div class="line4">
       
-      <button class="cursor hidden" id="InvertButton" onclick="ShowBtn4()">Invert Button!</button>
-      <button class="cursor hidden" id="RotateButton" onclick="ShowBtn4()">Rotate Button!</button>
-      <button class="cursor hidden" id="MovementButton" onclick="ShowBtn4()">Movement Button!</button>
-      <button class="cursor hidden" id="DarkModeButton" onclick="ShowBtn4()">Dark Mode Button!</button>
+      <button class="cursor hidden changeBtn" id="InvertButton" onclick="ShowBtn4(); InvertBtn();">Invert Button!</button>
+      <button class="cursor hidden changeBtn" id="RotateButton" onclick="ShowBtn4(); RotateBtn();">Rotate Button!</button>
+      <button class="cursor hidden changeBtn" id="MovementButton" onclick="ShowBtn4(); MovementBtn();">Movement Button!</button>
+      <button class="cursor hidden changeBtn" id="DarkModeButton" onclick="ShowBtn4(); DarkModeBtn();">Dark Mode Button!</button>
 
       </div>
 
       <div class="line5">
 
-        <button class="cursor hidden" id="OtherButton" onclick="ShowTxt()">Reveal Text</button>
+        <button class="cursor hidden changeBtn" id="OtherButton" onclick="ShowTxt()">Reveal Text</button>
       
       </div>
 
