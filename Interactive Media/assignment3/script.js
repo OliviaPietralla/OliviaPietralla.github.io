@@ -1,29 +1,4 @@
-// RANDOMNESS //
 
-// randomPosition 
-// absolute
-// left and top 
-// offset - minus the width of the button so that it doesnt go off the screen
-
-// keep something from repeating 
-// shift - removes one item from the array (used name array)
-
-// Create buttons into array - randomIntRange (whole numbers) ((suffleArray))
-
-// add event listening ("click"), function (random Position)
-
-// BUTTON ARRAY
-
-
-// const button = buttonArray[getRandomInt(buttonArray.length)];
-// document.getElementById(button)
-// button.classList.toggle('hidden');
-
-// colorButton.addEventListener("click"), function() {
-//     buttonVisible.forEach(button => {
-//         button.toggle('Colour')
-//     });
-// }
 
 // BUTTONS APPEAR
 
@@ -147,5 +122,3 @@ function ResetBtn() {
             button.className = 'ResetBtnClick changeBtn hidden';
     }
 }
-
-// button container not to move when button changes shape
