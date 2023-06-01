@@ -23,39 +23,56 @@ function getRandomInt(max) {
   }
 
 
-const button = buttonArray[getRandomInt(buttonArray.length)];
-document.getElementById(button)
-button.classList.toggle('hidden');
+// const button = buttonArray[getRandomInt(buttonArray.length)];
+// document.getElementById(button)
+// button.classList.toggle('hidden');
 
-colorButton.addEventListener("click"), function() {
-    buttonVisible.forEach(button => {
-        button.toggle('Colour')
-    });
+// colorButton.addEventListener("click"), function() {
+//     buttonVisible.forEach(button => {
+//         button.toggle('Colour')
+//     });
+// }
+
+// BUTTONS APPEAR
+
+function ShowBtn1() {
+    document.getElementById('RoundButton').style.display = "inline";
+    document.getElementById('SquareButton').style.display = "inline";
+
+    let buttons = document.getElementsByClassName('changeBtn');
+
+    for (let button of buttons) {
+        //button.innerHTML = "test"
+        button.classList.add('RoundBtnClick')
+    }
+
+    for (let button of buttons) {
+        button.classList.add('SquBtnClick')
+    }
 }
 
-function ShowBtn() {
-    document.getElementById('RoundButton').style.display = "block";
+function ShowBtn2() {
+    document.getElementById('EnlargeButton').style.display = "inline";
+    document.getElementById('ColourButton').style.display = "inline";
+    document.getElementById('ShrinkButton').style.display = "inline";
 }
 
-// COLLAPSIBLE 
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function(){
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    });
+function ShowBtn3() {
+    document.getElementById('InvertButton').style.display = "inline";
+    document.getElementById('DarkModeButton').style.display = "inline";
+    document.getElementById('RotateButton').style.display = "inline";
+    document.getElementById('MovementButton').style.display = "inline";
 }
 
-// COLOUR BUTTON
+function ShowBtn4() {
+    document.getElementById('OtherButton').style.display = "inline"; 
+}
 
-function colour(){
-    document.getElementById("ColourButton").style.backgroundColor = "red";
+
+function ColourBtn() {
+    document.getElementsByClassName('colour').style.background = "purple";
+}
+
+function ShowTxt() {
+    document.getElementById("words").innerHTML = "500 Word Explanation";
 }
