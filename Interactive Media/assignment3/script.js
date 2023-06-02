@@ -110,6 +110,8 @@ function ShowBtn4() {
     document.getElementById('OtherButton').style.display = "inline"; 
 }
 
+// TOGGLE TEXT
+
 function ShowTxt() {
     var x =
     document.getElementById("words");
