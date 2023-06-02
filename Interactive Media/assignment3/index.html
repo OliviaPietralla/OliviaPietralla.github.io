@@ -10,7 +10,7 @@
 
    <script src="script.js"></script>
 
-   <title> Assignment 3</title>
+   <title> Assignment 3 - Olivia Pietralla</title>
 
  </head>
 
@@ -61,7 +61,28 @@
 
     </div>
 
-    <p id="words"></p>
+    <div class="hidden" id="words">
+      
+      <p>To inspire my creative process, I chose to develop an interactive web browser with the purpose of displaying ‘growth’ and focused on giving the user agency as they navigate the website. 
+        <br>
+      GROWING
+        <br>
+      The main idea of the interaction is that the website grows the more the user interacts with it – the growth being the expanding amount of content visible to the user. The webpage is made up of buttons with only one being initially visible. Once the user clicks to start, the next row of buttons appears. I achieved this ‘growing’ display by forming a grid in HTML and arranging the 10 buttons in a pyramid shape. The growth concludes once the user has clicked through each row, and a ‘Reveal Text’ button appears in the centre of the last row.  
+        <br>
+      AGENCY
+        <br>
+      Agency is given to the user as they have the ability to click any button visible to them. Buttons are universally understood to be clicked and have a guaranteed outcome, with this knowledge users can use their power to make something happen. I built on this idea by also relying heavily on the design principle, feedback. Each button has a distinct CSS style attached to them, with the idea that when they are clicked, that style is applied to all other buttons. To indicate to the user what style each button is, I labelled them with a descriptive word, but also when the user hovers their mouse over the button, it would show a preview of exactly what the button would do. Another important feature of the website is the reset button. This further provides agency for the user because they can click this button to reset the buttons to their default state at any time during the interaction. 
+        <br>
+      OUTCOME
+        <br>
+      After developing a wireframe and detailed plan, I wasn’t sure exactly what the outcome would look like. The technical process involved lots of repeating code, as I had to create a different function for every button, where it calls upon the class with the appropriate CSS styling. I believe that the layering and structured arrangement of the code defaulted to a combining effect, where a button is clicked and the other buttons adopt that style but if another is clicked, it adopts that style as well. I did not initially intend for this, but I think it makes the interaction more interesting as the user can spend some time trying different combinations of ‘active’ buttons. 
+        <br>
+      CHALLENGES
+        <br>
+      However, some parts of the interaction are clunky and in hindsight, I would spend more time trying to resolve these issues. For example, once a button is clicked, it cannot be clicked again to re-adopt the style. More noticeably, the round and square buttons are disruptive to the website because they have specific dimensions to change shape, when the mouse hovers over them, the other buttons try to readjust to fit more neatly in the grid. I attempted to fix this issue by encasing them in a separate div container with static dimensions but ran out of time to create a satisfying solution. 
+      </p>
+
+    </div>
 
  </body>
 
